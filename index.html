@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Emmy's awesome website</title>
+        <!-- image that shows on your tab -->
+        <link rel="icon" type="image/x-icon" href="https://64.media.tumblr.com/863ab040935753462671ce81e84222ed/3002751bde25425b-96/s75x75_c1/45dc2676cbfca7d9eedb451f62fc4763a47e720f.gifv">
+ 
+        <meta name="theme-color" content="#f06fa0">
+        <meta name="description" content="Description">
+        <meta name="keywords" content="Keywords you want for your website">
+        <meta name="author" content="Emmykins">
+
+        <meta property="og:title" content="Emmy's awesome website">
+        <meta property="og:description" content="Description">
+        <meta property="og:type" content="website">
+
+        <!-- Hi! I coded this layout for my friend Emmy so if you're reading this please do not steal this layout 1:1! taking bits and bobs more than okay.  -->
+
+        <style>
+               /* Anyways if you add a lot you may want to move this into the style.css tab for easier editing! */
+
+            * {
+                box-sizing: border-box;
+                cursor: url("https://file.garden/app5NUCh-on09Abt/emmy/cur.webp"), auto;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                margin: 0;
+            }
+
+            a {
+                color: #d87093;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: pink;
+                text-decoration: wavy underline;
+                /* change cursor on hover if u want to
+                   cursor: url("#"), auto; */
+            }
+
+            body {
+                margin: 0;
+                padding: 12px;
+                font-family: Arial, sans-serif;
+                background: #fdf5f7
+                    url("https://file.garden/app5NUCh-on09Abt/emmy/bg/checkbgww.png");
+                color: #555;
+            }
+
+            .page {
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .box {
+                min-width: 0;
+                padding: 0px;
+                border-radius: 6px;
+                border: 1px dashed #ffb0c9;
+                outline: 2px solid white;
+                box-shadow: 3px 3px #a3736750;
+                background: white;
+                text-align: center;
+                overflow-wrap: anywhere;
+            }
+
+            .header {
+                min-height: 80px;
+                margin-bottom: 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .header h2 {
+                margin: 0;
+                color: #d87093;
+            }
+
+            .footer {
+                min-height: 60px;
+                margin-top: 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .footer p {
+                margin: 0;
+                font-weight: bold;
+            }
+
+            .layout {
+                display: grid;
+                grid-template-columns: 1fr 2fr 1fr;
+                gap: 12px;
+                align-items: start;
+                padding: 20px;
+                background: #fffdfd
+                    url("https://file.garden/app5NUCh-on09Abt/emmy/bg/checkbg2.png") 2px
+                    3px / 10px;
+                background-attachment: scroll;
+                border: 1px pink groove;
+                border-radius: 6px;
+            }
+
+            .left,
+            .main,
+            .right {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                min-width: 0;
+            }
+
+            .row-bg {
+                display: flex;
+                gap: 12px;
+                width: 100%;
+                min-width: 0;
+                padding: 10px;
+                border: 1px solid #ffccd5;
+                border-radius: 8px;
+                background: url("https://file.garden/app5NUCh-on09Abt/emmy/bg/checkbgww.png");
+            }
+
+            .side-bg {
+                width: 100%;
+                min-width: 0;
+                padding: 10px;
+                background: url("https://file.garden/app5NUCh-on09Abt/emmy/bg/checkbgww.png");
+                border: 1px solid #ffccd5;
+                border-radius: 8px;
+            }
+
+            .side-bg .box {
+                min-height: 120px;
+            }
+
+            .left .side-bg:first-child .box {
+                min-height: 140px;
+            }
+
+            .row {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+                min-width: 0;
+            }
+
+            .three {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .last {
+                grid-template-columns: 5fr 2fr 5fr;
+            }
+
+            .short {
+                min-height: 50px;
+            }
+
+            .first-row-content {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+                width: 100%;
+                min-width: 0;
+            }
+
+            .first-row-bottom {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+                width: 100%;
+                min-width: 0;
+            }
+
+            .hanahime {
+                display: block;
+                width: 40%;
+                max-width: 160px;
+                height: auto;
+                object-fit: contain;
+            }
+
+            .first-row-text {
+                flex: 1;
+                min-width: 0;
+            }
+
+            .scrollable {
+                width: 95%;
+                height: 180px;
+                overflow-y: auto;
+                margin: 10px;
+                background: #fff;
+                color: #a37367;
+                padding: 5px;
+
+                outline: 1px dashed #d5bab2;
+                outline-offset: -6px;
+                filter: drop-shadow(3px 3px #a3736730);
+                margin-bottom: 15px;
+
+                border: 5px solid transparent;
+                border-image: url("https://file.garden/agNXN-70-A0s3x3o/main/border.png") 5
+                    fill round;
+                border-image-outset: 2px;
+            }
+
+            hr {
+                border: 0;
+                border-top: 1px dashed hotpink;
+                margin: 8px 0;
+            }
+
+            .toplace {
+                background-image: url("https://file.garden/app5NUCh-on09Abt/emmy/bg/toplacey.png");
+                background-size: auto 100%;
+                position: relative;
+                background-position: 11px 0px;
+                width: 100%;
+                height: 20px;
+                filter: drop-shadow(0px 1px #d1b9b3);
+            }
+
+            .imglace1 {
+                border-width: 7px;
+                border-style: solid;
+                border-image: url("https://file.garden/app5NUCh-on09Abt/emmy/border/2jXrMdE.png")
+                    11 fill round;
+            }
+
+            @media (max-width: 900px) {
+                .layout {
+                    grid-template-columns: 1fr;
+                }
+
+                .side-bg .box {
+                    min-height: auto;
+                }
+            }
+
+            @media (max-width: 700px) {
+                body {
+                    padding: 8px;
+                }
+                .layout {
+                    gap: 8px;
+                    padding: 10px;
+                }
+                .left,
+                .main,
+                .right {
+                    gap: 8px;
+                }
+                .row-bg,
+                .side-bg {
+                    padding: 8px;
+                }
+                .row {
+                    gap: 8px;
+                }
+                .box {
+                    min-height: auto;
+                    padding: 8px;
+                    font-size: 14px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .row,
+                .three,
+                .last {
+                    grid-template-columns: 1fr;
+                }
+                .first-row-bottom {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .hanahime {
+                    width: 60%;
+                    margin: 0 auto;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="page">
+            <div class="layout">
+
+                <header class="box header" style="grid-column: 1 / -1;">
+                    <h2>Header</h2>
+                </header>
+
+                <aside class="left">
+                    <div class="side-bg">
+                        <div class="box">
+                            <p>left 1</p>
+                        </div>
+                    </div>
+
+                    <div class="side-bg">
+                        <div class="box">
+                            <p>Left 2</p>
+                        </div>
+                    </div>
+
+                    <div class="side-bg">
+                        <div class="box"><p>Left 3</p></div>
+                    </div>
+
+                    <div class="side-bg">
+                        <div class="box"><p>Left 4</p></div>
+                    </div>
+
+                    <div class="side-bg">
+                        <div class="box"><p>Left 5</p></div>
+                    </div>
+                </aside>
+
+
+                <main class="main">
+                    <div class="row-bg">
+                        <div class="box" style="width: 100%;">
+                            <div class="first-row-content">
+                                <div class="toplace"></div>
+                                <div class="first-row-bottom">
+                                    <img class="hanahime" src="https://files.catbox.moe/mxm8i4.png" alt="deco">
+                                    <div class="first-row-text">
+                                        <div class="scrollable">
+                                            <p><strong>Main 2 box</strong></p>
+                                            <p>Random text to get a feel of the length blah blah blah Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                        </div>
+                                        <img src="https://files.catbox.moe/xxyc68.gif" alt="rainbow" style="max-width: 100%; height: auto; padding-bottom:5px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-bg">
+                        <div class="box short" style="width:100%;">
+                            <p>Main 3</p>
+                        </div>
+                    </div>
+
+                    <div class="row-bg row">
+                        <div class="box"><p>Main 4</p></div>
+                        <div class="box"><p>Main 5</p></div>
+                    </div>
+
+                    <div class="row-bg">
+                        <div class="box short" style="width:100%;">
+                            <p>Main 6</p>
+                        </div>
+                    </div>
+
+                    <div class="row-bg row three">
+                        <div class="box">
+                            <img src="https://file.garden/app5NUCh-on09Abt/emmy/pic/401545_1787997010.png" width="60%" class="imglace1" alt="deco" onerror="this.src='https://placehold.co/80x80/ffb0c9/ffffff?text=Img'">
+                            <p>Main 7</p>
+                        </div>
+                        <div class="box" style="background:url('https://file.garden/app5NUCh-on09Abt/emmy/pic/9f9d09a3516d5dead52d.png') #fff; padding:10px; background-size:cover; background-repeat:no-repeat; background-position: top;">
+                            <p style="margin-top:56px;">Main 8</p>
+                        </div>
+                        <div class="box">
+                            <img src="https://file.garden/app5NUCh-on09Abt/emmy/pic/401545_1787997010.png" width="60%" class="imglace1" alt="deco" onerror="this.src='https://placehold.co/80x80/ffb0c9/ffffff?text=Img'">
+                            <p>Main 9</p>
+                        </div>
+                    </div>
+
+                    <div class="row-bg">
+                        <div class="box short" style="width:100%;">
+                            <p>Main 10</p>
+                        </div>
+                    </div>
+
+                    <div class="row-bg row last">
+                        <div class="box"><p>Main 11</p></div>
+                        <div class="box"><p>Main 12</p></div>
+                        <div class="box"><p>Main 13</p></div>
+                    </div>
+                </main>
+
+                <aside class="right">
+                    <div class="side-bg">
+                        <div class="box"><p>Right 1</p></div>
+                    </div>
+
+                    <div class="side-bg">
+                        <div class="box">
+                            <div style="text-align: center; display: flex; justify-content: center; gap: 4px; align-items: center; margin-bottom: 8px;">
+                                <img src="https://files.catbox.moe/yu3c8c.png" width="45" alt="icon1" onerror="this.style.display='none'">
+                                <img src="https://files.catbox.moe/60ny30.png" width="45" alt="icon2" onerror="this.style.display='none'">
+                                <img src="https://files.catbox.moe/nv7ppi.png" width="50" alt="icon3" onerror="this.style.display='none'">
+                            </div>
+                            <img src="https://file.garden/app5NUCh-on09Abt/emmy/pic/4858856.jpeg" alt="Right 2" style="width:100%; height:auto; border-radius: 4px;" onerror="this.src='https://placehold.co/200x150/ffb0c9/ffffff?text=Sidebar+Image'">
+                        </div>
+                    </div>
+
+                    <div class="side-bg">
+                        <div class="box"><p>Right 3</p></div>
+                    </div>
+
+                    <div class="side-bg">
+                        <div class="box"><p>Right 4</p></div>
+                    </div>
+
+                    <div class="side-bg">
+                        <div class="box"><p>Right 5</p></div>
+                    </div>
+                </aside>
+
+                <footer class="box footer" style="grid-column: 1 / -1;">
+                    <p>Footer</p>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
